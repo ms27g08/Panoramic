@@ -46,9 +46,9 @@ namespace Panoramic
       // 
       // pictureBox1
       // 
-      this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+      this.pictureBox1.Location = new System.Drawing.Point(27, 27);
       this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(2991, 976);
+      this.pictureBox1.Size = new System.Drawing.Size(2962, 952);
       this.pictureBox1.TabIndex = 1;
       this.pictureBox1.TabStop = false;
       // 

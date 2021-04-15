@@ -29,6 +29,7 @@ using System.Net.NetworkInformation;
 using System.Threading;
 using System.Diagnostics;
 using System.Drawing.Imaging;
+using System.Text.RegularExpressions;
 
 namespace Panoramic
 {
@@ -97,6 +98,9 @@ namespace Panoramic
       Thread.Sleep(3000);
       string[] fileNames = Directory.GetFiles(imagefolder, "*.bmp");
 
+      Array.Sort(fileNames, (a, b) => int.Parse(Regex.Replace(a, "[^0-9]", "")) - int.Parse(Regex.Replace(b, "[^0-9]", "")));
+
+
       List<Bitmap> images = new List<Bitmap>();
 
       for( int k = 0; k<fileNames.Length; k++)
@@ -113,6 +117,8 @@ namespace Panoramic
 
      pictureBox1.Image = merged;
       pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+    //  panel1.AutoScroll = true;
+
 
 
 
